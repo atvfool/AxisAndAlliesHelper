@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ana1914">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp"
+            android:rowCount="10"
+            android:columnCount="4">
+            <LinearLayout
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="Available IPCs"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="210dp"
+                    />
+                <ImageButton
+                    android:id="@+id/btnClear"
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="@dimen/row_height"
+                    android:src="@android:drawable/ic_delete"
+                    android:onClick="btnClear_OnClick"
+                    />
+                <EditText
+                    android:id="@+id/txtAvailableIPCs"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:inputType="number"
+                    android:text="30"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnSetIPCs"
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="@dimen/row_height"
+                    android:onClick="btnSetIPCs_OnClick"
+                    android:src="@android:drawable/ic_menu_add"
+                    tools:src="@android:drawable/ic_menu_add" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:orientation="horizontal"
+                android:layout_columnSpan="4">
+
+                <ImageView
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/infantry"
+                    />
+                <TextView
+                    android:layout_width="@dimen/unit_description_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/infantry_desc"
+                    />
+                <ImageButton
+                    android:id="@+id/btnMinusInfantry"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="match_parent"
+                    android:onClick="btnMinusInfantry_OnClick"
+                    />
+
+                <EditText
+                    android:id="@+id/txtQuantityInfantry"
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="match_parent"
+                    android:layout_column="2"
+                    android:layout_row="1"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPlusInfantry"
+                    android:src="@android:drawable/ic_media_next"
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="match_parent"
+                    android:onClick="btnPlusInfantry_OnClick"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="55dp"
+                    android:src="@mipmap/artillery"
+                    />
+                <TextView
+                    android:layout_width="@dimen/unit_description_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/artillery_desc"/>
+                <ImageButton
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:id="@+id/btnMinusArtillery"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:onClick="btnMinusArtillery_OnClick"
+                    />
+
+                <EditText
+                    android:id="@+id/txtQuantityArtillery"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:id="@+id/btnPlusArtillery"
+                    android:src="@android:drawable/ic_media_next"
+                    android:onClick="btnPlusArtillery_OnClick"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="55dp"
+                    android:src="@mipmap/tank"
+                    />
+
+                <TextView
+                    android:layout_width="@dimen/unit_description_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tank_desc"/>
+
+                <ImageButton
+                    android:id="@+id/btnMinusTank"
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="@dimen/row_height"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:onClick="btnMinusTank_OnClick"
+                    />
+
+                <EditText
+                    android:id="@+id/txtQuantityTank"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPlusTank"
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="@dimen/row_height"
+                    android:src="@android:drawable/ic_media_next"
+                    android:onClick="btnPlusTank_OnClick"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:src="@mipmap/fighter"
+                    />
+                <TextView
+                    android:layout_width="@dimen/unit_description_width"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fighter_desc"/>
+
+                <ImageButton
+                    android:id="@+id/btnMinusFighter"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnMinusFighter_OnClick"
+                    />
+
+                <EditText
+                    android:id="@+id/txtQuantityFighter"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPlusFighter"
+                    android:src="@android:drawable/ic_media_next"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnPlusFighter_OnClick"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="@dimen/row_height"
+                    android:src="@mipmap/battleship"
+                    />
+
+                <TextView
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/unit_description_width"
+                    android:text="@string/battleship_desc" />
+
+                <ImageButton
+                    android:id="@+id/btnMinusBattleship"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnMinusBattleship_OnClick"
+                    />
+
+                <EditText
+                    android:id="@+id/txtQuantityBattleship"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPlusBattleship"
+                    android:src="@android:drawable/ic_media_next"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnPlusBattleship_OnClick"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:layout_row="6"
+                android:layout_columnSpan="4"
+                android:layout_column="0"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="@dimen/row_height"
+                    android:src="@mipmap/cruiser"
+                    />
+
+                <TextView
+                    android:layout_width="@dimen/unit_description_width"
+                    android:layout_height="@dimen/row_height"
+                    android:text="@string/cruiser_desc"/>
+
+                <ImageButton
+                    android:id="@+id/btnMinusCruiser"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnMinusCruiser_OnClick"
+                    />
+
+                <EditText
+                    android:id="@+id/txtQuantityCruiser"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPlusCruiser"
+                    android:src="@android:drawable/ic_media_next"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnPlusCruiser_OnClick"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:layout_row="7"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/pic_width"
+                    android:layout_height="@dimen/row_height"
+                    android:src="@mipmap/sub"
+                    />
+
+                <TextView
+                    android:layout_width="@dimen/unit_description_width"
+                    android:layout_height="@dimen/row_height"
+                    android:text="@string/sub_desc"/>
+
+                <ImageButton
+                    android:id="@+id/btnMinusSubmarine"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnMinusSubmarine_OnClick"
+                    />
+
+                <EditText
+                    android:id="@+id/txtQuantitySubmarine"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPlusSubmarine"
+                    android:src="@android:drawable/ic_media_next"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnPlusSubmarine_OnClick"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/row_height"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:layout_row="8"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:src="@mipmap/transport"
+                    />
+
+                <TextView
+                    android:layout_width="@dimen/unit_description_width"
+                    android:layout_height="@dimen/row_height"
+                    android:text="@string/transport_desc"/>
+
+                <ImageButton
+                    android:id="@+id/btnMinusTransport"
+                    android:src="@android:drawable/ic_media_previous"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnMinusTransport_OnClick"
+                    />
+
+                <EditText
+                    android:id="@+id/txtQuantityTransport"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:inputType="number"
+                    android:text="0"
+                    android:gravity="center"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPlusTransport"
+                    android:src="@android:drawable/ic_media_next"
+                    android:layout_height="@dimen/row_height"
+                    android:layout_width="@dimen/pic_width"
+                    android:onClick="btnPlusTransport_OnClick"
+                    />
+
+
+            </LinearLayout>
+
+
+        </GridLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

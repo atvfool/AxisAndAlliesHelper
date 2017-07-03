@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="infantry_cost">3</integer>
+    <integer name="artillery_cost">4</integer>
+    <integer name="tank_cost">6</integer>
+    <integer name="fighter_cost">6</integer>
+    <integer name="battleship_cost">12</integer>
+    <integer name="cruiser_cost">9</integer>
+    <integer name="submarine_cost">6</integer>
+    <integer name="transport_cost">6</integer>
+</resources>

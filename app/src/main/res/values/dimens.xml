@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="row_height">85dp</dimen>
+    <dimen name="pic_width">55dp</dimen>
+    <dimen name="unit_description_width">155dp</dimen>
+</resources>

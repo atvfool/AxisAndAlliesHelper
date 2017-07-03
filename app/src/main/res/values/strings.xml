@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Axis &amp; Allies 1914 Helper</string>
+
+    <string name="infantry_name">Infantry</string>
+    <string name="artillery_name">Artillery</string>
+    <string name="tank_name">Tank</string>
+    <string name="fighter_name">Fighter</string>
+    <string name="battleship_name">Battleship</string>
+    <string name="cruiser_name">Cruiser</string>
+    <string name="submarine_name">Submarine</string>
+    <string name="transport_name">Transport</string>
+    <string name="infantry_desc">Cost: 3 \nAttack: 2, 3 w/Artillery \nDefend: 3</string>
+    <string name="artillery_desc">Cost: 4 \nAttack,Defend: 3, 4 w/Air</string>
+    <string name="tank_desc">Cost: 6 \nAttack: 2, 3 w/Artillery \nDefend:1</string>
+    <string name="fighter_desc">Cost: 6</string>
+    <string name="battleship_desc">Cost: 12 \nAttack/Bombardment,Defend:4</string>
+    <string name="cruiser_desc">Cost: 9 \nAttack,Defend:3</string>
+    <string name="sub_desc">Cost: 6 \nAttack,Defend:2</string>
+    <string name="transport_desc">Cost: 6 \nAttack,Defend:0</string>
+    <string name="btn_axis_allies_1914"><![CDATA[Axis & Allies 1914]]></string>
+</resources>
